@@ -1,0 +1,48 @@
+// заголовок (скрытие)
+.section-title.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.features {
+  .icon-container {
+    @extend %flex-align-center;
+    justify-content: center;
+
+    // width: 270px;
+    height: 120px;
+    background-color: $secondary-bg-color;
+    margin-bottom: 30px;
+  }
+  .features-icon {
+    display: block;
+  }
+
+  .item + .item {
+    margin-bottom: 30px;
+  }
+
+  .title {
+    margin-bottom: 10px;
+    text-align: center;
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}

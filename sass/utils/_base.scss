@@ -1,0 +1,35 @@
+body {
+  background-color: $primary-white-color;
+  color: $primary-text-color;
+  font-family: roboto, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+}
