@@ -83,7 +83,6 @@
 }
 
 .footer-form {
-  width: 100%;
   padding: 0;
 
   .button {
@@ -123,9 +122,12 @@
 .form-mail {
   padding-top: 15px;
   padding-bottom: 15px;
-  width: 450px;
   margin-bottom: 20px;
   border: 1px solid $fotter-border-form-color;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0);
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
 }
