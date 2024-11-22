@@ -24,14 +24,33 @@
     border-radius: 4px;
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
       0 1px 3px 0 rgba(0, 0, 0, 0.12);
-    &:not(:last-child) {
-      margin-bottom: 30px;
+    @media screen and (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
   }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
 
-  // .item + .item {
-  //   margin-left: 30px;
-  // }
+    .item.employee-card {
+      flex: calc(50% - 30px); // Два элемента в ряд на экране от 768px до 1199px
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap; // Отключаем перенос строк
+    gap: 0; // Убираем общий gap
+
+    .item {
+      // Устанавливаем отступ слева
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
+    }
+  }
 }
 
 .social-list {

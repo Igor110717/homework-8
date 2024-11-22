@@ -12,6 +12,41 @@
 }
 
 .features {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .item {
+      flex: calc(50% - 30px); // Два элемента в ряд на экране от 768px до 1199px
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap; // Отключаем перенос строк
+    gap: 0; // Убираем общий gap
+
+    .item {
+      // Устанавливаем отступ слева
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .item {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+
   .icon-container {
     @extend %flex-align-center;
     justify-content: center;
@@ -25,24 +60,16 @@
     display: block;
   }
 
-  .item + .item {
-    margin-bottom: 30px;
-  }
-
   .title {
     margin-bottom: 10px;
-    text-align: center;
     color: $title-text-color;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-  }
-
-  .text {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 }

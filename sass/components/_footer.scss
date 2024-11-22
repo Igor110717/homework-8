@@ -51,11 +51,71 @@
   // .footer-social-block {
   //   margin-top: 60px;
   // }
+  .footer-info {
+    display: flex;
+    flex-direction: column; // Вертикально по умолчанию
+    align-items: center;
+    // margin-top: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .footer-info {
+      // display: flex;
+      flex-direction: row; // Горизонтально на больших экранах
+      align-items: flex-start;
+      gap: 165px; // Отступ между адресом и соцсетями
+      text-align: center;
+      margin-top: 60px;
+
+      .footer-adress {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .footer-content {
+      display: flex;
+      justify-content: space-between; /* Разделяет блоки по ширине */
+      align-items: flex-start;
+      flex-direction: row;
+      text-align: left; /* Выровнять текст по левому краю */
+      width: 100%;
+    }
+
+    .footer-info {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 70px; /* Отступ между блоками */
+      margin-top: 0px;
+
+      .footer-adress {
+        margin-top: 60px;
+      }
+    }
+
+    .form-block {
+      margin-bottom: 0;
+    }
+    .footer-social-block {
+      margin-top: 72px;
+      margin-bottom: 100px;
+      margin-left: 70px;
+
+      .title {
+        text-align: left;
+      }
+    }
+    .footer-adress {
+      margin-top: 60px;
+    }
+  }
 }
 
 .social-list-footer {
   display: flex;
-
+  align-items: center;
   .item + .item {
     margin-left: 10px;
   }
@@ -104,18 +164,30 @@
     letter-spacing: 0.03em;
     color: $contact-info-color;
   }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+
+    gap: 12px; /* Отступ между полем ввода и кнопкой */
+  }
 }
 
 .form-block {
   display: flex;
   flex-direction: column;
   margin-bottom: 60px;
+  margin-top: 60px;
 
   .title {
     display: block;
     margin-left: 0;
-    margin-top: 72px;
     margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+    margin-top: 72px;
   }
 }
 
@@ -129,5 +201,9 @@
 
   @media screen and (min-width: 480px) {
     width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0px;
+    width: 358px;
   }
 }

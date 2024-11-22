@@ -2,6 +2,10 @@ body {
   background-color: $primary-white-color;
   color: $primary-text-color;
   font-family: roboto, sans-serif;
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 ul {
@@ -38,4 +42,10 @@ ul {
   @media screen and (min-width: 1200px) {
     width: 1200px;
   }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

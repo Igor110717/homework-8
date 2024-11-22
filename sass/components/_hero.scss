@@ -1,10 +1,10 @@
 .hero {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 400px;
-  max-width: 480px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 
@@ -14,15 +14,35 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero.jpg);
+    url(../images/Header480.jpg);
+
+  @media (min-resolution: 2dppx) {
+    background-image: url(../images/Header2x480.jpg);
+  }
+  @media (min-width: 480px) {
+    background-image: url(../images/Header768.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/Header2x768.jpg);
+    }
+  }
+  @media (min-width: 768px) {
+    background-image: url(../images/Header1200.jpg);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/Header2x1200.jpg);
+    }
+  }
   background-position: center;
   background-size: cover;
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    height: 600px;
+  }
 }
 
 .hero-title {
   color: $primary-white-color;
-  margin-top: 0px;
+
   margin-bottom: 30px;
 
   font-weight: 900;
@@ -30,4 +50,9 @@
   line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }

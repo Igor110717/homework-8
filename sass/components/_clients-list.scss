@@ -21,10 +21,24 @@
       color: $acctent-color;
       border-color: $acctent-color;
     }
+    @media screen and (min-width: 768px) {
+      width: 226px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+    }
   }
-  // .item + .item {
-  //   margin-left: 30px;
-  // }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap; // Отключаем перенос строк
+    gap: 0; // Убираем общий gap
+
+    .item {
+      // Устанавливаем отступ слева
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
+    }
+  }
 }
 .client-icon {
   fill: currentColor;
